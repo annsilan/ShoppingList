@@ -8,7 +8,7 @@ import Product from "components/Products"
 import "primeicons/primeicons.css"
 
 function App() {
-    const [products,setProducts] = useState([
+    const [products, setProducts] = useState([
         {
             id: 1,
             name: "Молоко",
@@ -42,25 +42,24 @@ function App() {
     }
 
     const addProduct = (product) => {
-        
         setProducts([...products, product])
     }
 
     const updateProducts = (id) => {
-        const items =  products.map((item) => {
-            if (item.id===id){
-                return {...item,isAdded: !item.isAdded}
-            } else{
+        const items = products.map((item) => {
+            if (item.id === id) {
+                return { ...item, isAdded: !item.isAdded }
+            } else {
                 return item
             }
-        })   
+        })
         setProducts(items)
     }
 
     return (
         <div className="font-serif text-sky-800 bg-sky-50 max-w-4xl m-auto">
             <Header />
-            <Search  addProduct={addProduct} />
+            <Search addProduct={addProduct} />
             <div className="min-h-screen">
                 {products.length === 0 && (
                     <div className=" text-xl text-center pt-32">
