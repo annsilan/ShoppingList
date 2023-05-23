@@ -10,27 +10,27 @@ import "primeicons/primeicons.css"
 function App() {
     const [products,setProducts] = useState([
         {
-            id: 0,
+            id: 1,
             name: "Молоко",
             isAdded: false
         },
         {
-            id: 1,
+            id: 2,
             name: "Хлеб",
             isAdded: false
         },
         {
-            id: 2,
+            id: 3,
             name: "Авокадо",
             isAdded: false
         },
         {
-            id: 3,
+            id: 4,
             name: "Манго",
             isAdded: false
         },
         {
-            id: 4,
+            id: 5,
             name: "Йогурт",
             isAdded: false
         }
@@ -60,7 +60,7 @@ function App() {
     return (
         <div className="font-serif text-sky-800 bg-sky-50 max-w-4xl m-auto">
             <Header />
-            <Search addProduct={addProduct} />
+            <Search  addProduct={addProduct} />
             <div className="min-h-screen">
                 {products.length === 0 && (
                     <div className=" text-xl text-center pt-32">

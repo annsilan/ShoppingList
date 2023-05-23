@@ -11,8 +11,7 @@ function Product(props) {
             <div>
                 <button onClick={()=>updateProducts(product.id)} className="mx-10 bg-sky-800  hover:bg-sky-500 focus:outline-none  rounded-lg text-xl font-semibold  text-white px-3 py-1 shadow-md" >
                     {product.isAdded === true ? "Добавлено!" : "В корзину" }</button>
-                    {/* <button onClick={()=>updateProducts(product.id)} className="mx-10 bg-sky-800  hover:bg-sky-900 focus:outline-none  rounded-lg text-xl font-semibold  text-white px-3 py-1 shadow-md">
-                      {product.isAdded === false  && "В корзину"}</button> */}
+                    
                 <Button
                     icon="pi pi-trash"
                     style={{ hover: "2rem" }}

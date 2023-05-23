@@ -2,36 +2,36 @@ import Buttons from "components/Button"
 import { useState } from "react"
 
 
-function Search({ addProduct }) {
+function Search({ addProduct}) {
     
   
-    const [id, setId] = useState("")
+    const [id, setId] = useState([])
     const [name, setName] = useState("")
     
-
+    
+   
     const onClick = (event) => {
         event.preventDefault()
-        let count = 0
         
-
-       
         const newProduct = {
             id,
             name
+            
         }
         addProduct(newProduct)
-        setId("")
+        setId([])
         setName("")
-        
-        console.log(Search)
+      
     }
+
+
 
     return (
         <div className="my-8 flex justify-center">
             <form>
                 <input
                     onChange={(event) => setName(event.target.value)}
-                  
+                    
                     value={name}
                     name="name"
                     type="text"
