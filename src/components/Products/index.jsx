@@ -1,6 +1,6 @@
 import { Button } from "primereact/button"
 import "primeicons/primeicons.css"
-// import Buttons from "components/Button"
+
 
 function Product(props) {
     const { product, deleteProduct, updateProducts } = props
