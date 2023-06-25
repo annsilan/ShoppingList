@@ -1,19 +1,20 @@
 import Buttons from "components/Button"
 import { useState } from "react"
+import { v4 as uuidv4 } from 'uuid'
 
 function Search({ addProduct }) {
-    const [id, setId] = useState([])
+    
     const [name, setName] = useState("")
 
     const onClick = (event) => {
         event.preventDefault()
 
         const newProduct = {
-            id,
+            id : uuidv4(),
             name
         }
         addProduct(newProduct)
-        setId([])
+        
         setName("")
     }
 
